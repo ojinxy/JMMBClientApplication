@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -28,6 +29,22 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+      .when('/loyalty/points', {
+        templateUrl: 'views/loyalty/loyalty_points.html',
+        controller: 'LoyaltyPointsController'
+      })
+      .when('/loyalty/earnedPoints', {
+        templateUrl: 'views/loyalty/loyalty_points_earned.html',
+        controller: 'LoyaltyPointsEarnedController'
+      })
+      .when('/loyalty/redeemedPoints', {
+        templateUrl: 'views/loyalty/loyalty_points_redeemed.html',
+        controller: 'LoyaltyPointsRedeemedController'
+      })
+      .when('/referral', {
+        templateUrl: 'views/referral.html',
+        controller: 'ReferralController'
       })
       .otherwise({
         redirectTo: '/'

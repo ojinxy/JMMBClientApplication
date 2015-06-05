@@ -12,6 +12,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <!-- endbuild -->
   </head>
   <body ng-app="angularApp">
@@ -38,9 +39,19 @@
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+                <li class="active"><a href="#/">Home</a></li>
+                <li>
+                    <!-- a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"><a ng-href="#/loyalty">Loyalty <span class="caret"></span></a> -->
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false"> Loyalty <span class="caret"></span>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ng-href="#/loyalty/points">Loyalty Points</a></li>
+                        <li><a ng-href="#/loyalty/earnedPoints">Earned Points</a></li>
+                        <li><a ng-href="#/loyalty/redeemedPoints">Redeemed Points</a></li>
+                    </ul>
+                </li>
+                <li><a ng-href="#/referral">Referral</a></li>
+                <li><a ng-href="#/about">About</a></li>
+                <li><a ng-href="#/">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -48,7 +59,7 @@
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+        <div ng-view=""></div>
     </div>
 
     <div class="footer">
@@ -84,11 +95,15 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+        <script src="scripts/js/ui-bootstrap-tpls-0.13.0.min.js"></script>
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/loyalty/loyalty_points.js"></script>
+        <script src="scripts/controllers/loyalty/loyalty_points_earned.js"></script>
+        <script src="scripts/controllers/loyalty/loyalty_points_redeemed.js"></script>
+        <script src="scripts/controllers/referral.js"></script>
         <!-- endbuild -->
 </body>
 </html>

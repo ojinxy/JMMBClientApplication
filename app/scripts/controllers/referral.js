@@ -4,11 +4,11 @@
  * @ngdoc function
  * @name angularApp.controller:AboutCtrl
  * @description
- * # AboutCtrl
- * Controller of the angularApp
+ * # ReferralController
+ * Referral Controller of the angularApp
  */
 angular.module('angularApp')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('ReferralController', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
